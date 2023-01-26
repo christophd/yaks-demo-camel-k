@@ -1,0 +1,15 @@
+{
+  "id": 1000,
+  "name": "Pineapple",
+  "category":{
+    "id": "1",
+    "name":"tropical"
+  },
+  "nutrition":{
+    "calories": 50,
+    "sugar": 9
+  },
+  "status": "AVAILABLE",
+  "price": 1.59,
+  "tags": ["sweet"]
+}

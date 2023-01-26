@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.apache</groupId>
+    <artifactId>apache</artifactId>
+    <version>21</version>
+  </parent>
+
+  <groupId>org.citrusframework.yaks</groupId>
+  <artifactId>yaks-demo-camel-k</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>YAKS :: Demo</name>
+  <description>Demo showing Cloud-native BDD testing with YAKS</description>
+
+  <organization>
+    <name>Red Hat</name>
+    <url>https://redhat.com</url>
+  </organization>
+
+  <licenses>
+    <license>
+      <name>The Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>The YAKS Team</name>
+    </developer>
+  </developers>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+    <maven.compiler.parameters>true</maven.compiler.parameters>
+    <maven.compiler.release>11</maven.compiler.release>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+
+    <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
+    <maven-failsafe-plugin.version>2.22.2</maven-failsafe-plugin.version>
+
+    <apache.camel.version>3.19.0</apache.camel.version>
+    <aws-java-sdk.version>1.12.146</aws-java-sdk.version>
+
+    <yaks.version>0.12.2</yaks.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.citrusframework.yaks</groupId>
+        <artifactId>yaks-standard</artifactId>
+        <version>${yaks.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.citrusframework.yaks</groupId>
+        <artifactId>yaks-openapi</artifactId>
+        <version>${yaks.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.citrusframework.yaks</groupId>
+        <artifactId>yaks-http</artifactId>
+        <version>${yaks.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.citrusframework.yaks</groupId>
+        <artifactId>yaks-camel</artifactId>
+        <version>${yaks.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.citrusframework.yaks</groupId>
+        <artifactId>yaks-camel-k</artifactId>
+        <version>${yaks.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.citrusframework.yaks</groupId>
+        <artifactId>yaks-kubernetes</artifactId>
+        <version>${yaks.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.citrusframework.yaks</groupId>
+        <artifactId>yaks-testcontainers</artifactId>
+        <version>${yaks.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.citrusframework.yaks</groupId>
+        <artifactId>yaks-openapi</artifactId>
+        <version>${yaks.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.camel</groupId>
+        <artifactId>camel-aws2-s3</artifactId>
+        <version>${apache.camel.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.amazonaws</groupId>
+        <artifactId>aws-java-sdk-s3</artifactId>
+        <version>${aws-java-sdk.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.citrusframework.yaks</groupId>
+      <artifactId>yaks-standard</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.citrusframework.yaks</groupId>
+      <artifactId>yaks-openapi</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.citrusframework.yaks</groupId>
+      <artifactId>yaks-http</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.citrusframework.yaks</groupId>
+      <artifactId>yaks-camel</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.citrusframework.yaks</groupId>
+      <artifactId>yaks-camel-k</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.citrusframework.yaks</groupId>
+      <artifactId>yaks-kubernetes</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.citrusframework.yaks</groupId>
+      <artifactId>yaks-testcontainers</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.citrusframework.yaks</groupId>
+      <artifactId>yaks-openapi</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-aws2-s3</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.amazonaws</groupId>
+      <artifactId>aws-java-sdk-s3</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <testResources>
+      <testResource>
+        <directory>test</directory>
+      </testResource>
+    </testResources>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${maven-compiler-plugin.version}</version>
+          <configuration>
+            <encoding>${project.build.sourceEncoding}</encoding>
+            <source>${maven.compiler.source}</source>
+            <target>${maven.compiler.target}</target>
+            <compilerArgs>
+              <arg>-Xlint:deprecation</arg>
+              <arg>-Xlint:unchecked</arg>
+            </compilerArgs>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <executions>
+            <execution>
+              <id>attach-sources</id>
+              <goals>
+                <goal>jar-no-fork</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <configuration>
+            <additionalJOption>-Xdoclint:none</additionalJOption>
+          </configuration>
+          <executions>
+            <execution>
+              <id>attach-javadocs</id>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>

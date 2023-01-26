@@ -1,0 +1,15 @@
+{
+  "id": 1002,
+  "name": "Strawberry",
+  "category":{
+    "id": "2",
+    "name":"berry"
+  },
+  "nutrition":{
+    "calories": 29,
+    "sugar": 5
+  },
+  "status": "AVAILABLE",
+  "price": 2.55,
+  "tags": ["red"]
+}
