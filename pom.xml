@@ -47,10 +47,10 @@
     <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
     <maven-failsafe-plugin.version>2.22.2</maven-failsafe-plugin.version>
 
-    <apache.camel.version>3.19.0</apache.camel.version>
+    <apache.camel.version>3.20.1</apache.camel.version>
     <aws-java-sdk.version>1.12.146</aws-java-sdk.version>
 
-    <yaks.version>0.12.2</yaks.version>
+    <yaks.version>0.13.0</yaks.version>
   </properties>
 
   <dependencyManagement>

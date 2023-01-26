@@ -1,7 +1,7 @@
 Feature: Camel K Fruit Store
 
   Background:
-    Given URL: http://localhost:8080
+    Given URL: yaks:env('FRUIT_SERVICE_URL','http://localhost:8080')
 
   Scenario: Create infrastructure
     # Start AWS S3 container

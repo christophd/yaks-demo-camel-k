@@ -3,8 +3,6 @@
 This represents the demo code for testing [Camel K](https://camel.apache.org/projects/camel-k/) with 
 [YAKS](https://github.com/citrusframework/yaks) using Cloud-native BDD testing. 
 
-The demo shows how to test a Camel K integration locally as well as on the Kubernetes platform. 
-
 # What is YAKS?
 
 YAKS is an Open Source test automation platform that leverages Behavior Driven Development concepts for running tests locally 
@@ -12,6 +10,8 @@ and on Cloud infrastructure (e.g. [Kubernetes](https://kubernetes.io/) or [OpenS
 This means that the testing tool is able to run your tests both as local tests and natively on Kubernetes. 
 The framework is specifically designed to verify Serverless and Microservice applications and aims for integration testing 
 with the application under test up and running in a production-like environment.
+
+The demo describes the steps to test a Camel K integration with YAKS both locally and on the Kubernetes platform.
 
 # Understanding the Camel K example
 
@@ -144,7 +144,11 @@ as posted in the initial Http request.
 YAKS uses the powerful message payload validation capabilities provided by Citrus for this message content verification. 
 The validation is able to compare message contents of type XML, Json, plaintext and many more.
 
-This completes the test case. You can run this test with Cucumber and JUnit or directly with the YAKS command line client.
+This completes the test case. You can now run this test with Cucumber and JUnit for instance.
+The easiest way though to directly run tests with YAKS is to use the [YAKS command line client](https://github.com/citrusframework/yaks/releases).
+You do not need to set up a whole project with Maven dependencies and so on.
+Just write the test file and run with:
+
 
 ```shell script
 $ yaks run fruit-service.feature --local
